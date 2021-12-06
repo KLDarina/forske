@@ -1,0 +1,221 @@
+.form {
+    padding: 200px 16px 0;
+
+    @media screen and (min-width: 2000px) {
+        padding: 500px $padding-xxl 50px;
+    }
+
+    @media screen and (min-width: 1600px) and (max-width: 1999px) {
+        padding: 500px $padding-xl 50px;
+    }
+
+    @media screen and (min-width: 1400px) and (max-width: 1599px) {
+        padding: 500px $padding-lg-big 50px;
+    }
+
+    @media screen and (min-width: 1099px) and (max-width: 1399px) {
+        padding: 500px $padding-lg-small 50px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1100px) {
+        padding: 200px 32px 0;
+    }
+
+    &__title {
+        text-align: left;
+    }
+
+    &__untitle {
+        font-family: $main-font-family;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 22px;
+        color: #5E5B88;
+        margin-top: 8px;
+
+        @media screen and (min-width: 1101px) {
+            font-size: 24px;
+            line-height: 33px;
+            margin-top: 12px;
+        }
+    }
+
+    &__inputs {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 100%;
+
+            @media screen and (min-width: 768px) {
+                width: calc(50% - 10px);
+            }
+
+            &:first-child {
+                @media screen and (min-width: 768px) {
+                    margin-right: 10px;
+                }
+
+            }
+
+            &:last-child {
+                @media screen and (min-width: 768px) {
+                    margin-left: 10px;
+                }
+
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        @media screen and (min-width: 1101px) {
+            margin: 0 122px;
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        margin-top: 20px;
+
+        @media screen and (min-width: 1101px) {
+            margin-top: 40px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            margin-bottom: 8px;
+            padding: 10px 20px 10px 34px;
+            outline: none;
+            background-color: #F6F8FF;
+            background-repeat: no-repeat;
+            background-position: 12px 12px;
+            background-size: 16px;
+            border-radius: 12px;
+            border: none;
+            resize: none;
+            font-family: $main-font-family;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 19px;
+            color: rgba(94, 91, 136, 0.7);
+            border: 2px solid transparent;
+            transition: all 0.3s ease-in-out;
+
+            @media screen and (min-width: 1101px) {
+                font-size: 20px;
+                line-height: 27px;
+                margin-bottom: 20px;
+                padding: 16px 20px 16px 54px;
+                background-position: 20px 16px;
+                background-size: initial;
+            }
+
+            &:hover {
+                background-color: #FFFFFF;
+                border: 2px solid #302D67;
+
+                &::placeholder {
+                    color: #302D67;
+                }
+            }
+
+            &:focus {
+                background-color: #DCE7FD;
+                border: 2px solid #0E6DD3;
+
+                &::placeholder {
+                    color: #0F77D8;
+                }
+            }
+
+            &::placeholder {
+                color: #CACDE5;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+
+        textarea {
+            height: 98px;
+
+            @media screen and (min-width: 768px) {
+                height: 100%;
+            }
+        }
+    }
+
+    &__button {
+        align-self: center;
+        padding: 14px 34px;
+        background: #0F77D8;
+        border-radius: 166px;
+        font-family: $main-font-family;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 25px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        text-transform: capitalize;
+        color: #FFFFFF;
+        cursor: pointer;
+        border: none;
+        transition: all 0.3s ease-in-out;
+
+        @media screen and (min-width: 1101px) {
+            font-size: 30px;
+            line-height: 41px;
+            padding: 20px 66px;
+        }
+
+        &:hover {
+            background: #065DAC;
+        }
+    }
+
+    &__name {
+        background-image: url(../assets/forma/user.svg);
+    }
+
+    &__email {
+        background-image: url(../assets/forma/email.svg);
+    }
+
+    &__tel {
+        background-image: url(../assets/forma/call.svg);
+    }
+
+    &__web {
+        background-image: url(../assets/forma/link-alt.svg);
+    }
+
+    &__industry {
+        background-image: url(../assets/forma/bar-chart-alt.svg);
+    }
+
+    &__request {
+        background-image: url(../assets/forma/edit.svg);
+    }
+}
